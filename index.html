@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Whack-a-Mole 🐹</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <body background="pic4.jpg">
+    <h1>Whack-a-Mole 🐹</h1>
+    <div class="scoreboard">
+      <span>Score: <span id="score">0</span></span>
+      <span>Time: <span id="time">30</span>s</span>
+    </div>
+    <div class="grid">
+      <!-- 3x3 Mole Grid -->
+      <div class="hole" id="hole0"></div>
+      <div class="hole" id="hole1"></div>
+      <div class="hole" id="hole2"></div>
+      <div class="hole" id="hole3"></div>
+      <div class="hole" id="hole4"></div>
+      <div class="hole" id="hole5"></div>
+      <div class="hole" id="hole6"></div>
+      <div class="hole" id="hole7"></div>
+      <div class="hole" id="hole8"></div>
+    </div>
+    <button id="startBtn">🎮 Start Game</button>
+  </div>
+
+  <audio id="hitSound" src="hit.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<div id="gameOverScreen" class="overlay hidden">
+  <div class="game-over-box">
+    <h2>Game Over!</h2>
+    <p>Your Score: <span id="finalScore">0</span></p>
+    <button onclick="closeGameOver()">Play Again</button>
+  </div>
+</div>
+    <!-- Audio Element for Funky Background Music (Autoplay) -->
+    <audio id="background-music" autoplay loop>
+      <source src="music.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+  </audio>   
+</div>
+<script>
+  const music = document
